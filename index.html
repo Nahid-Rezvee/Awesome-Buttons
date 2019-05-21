@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Material Buttons</title>
 
     <link href="./css/variables.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
@@ -13,16 +13,21 @@
 </head>
 
 <body>
+    <div class="no-btn-sections">
+        <h1>Basic Buttons (no ripple)</h1>
+        <a class="mtrl-btn">Link</a>
+        <button class="mtrl-btn">Button</button>
+        <button class="mtrl-btn mtrl-border">Button</button>
+        <button class="mtrl-btn mtrl-border mtrl-disabled">Disabled</button>
+    </div>
+
     <div class="ripple-btn-sections">
         <h1>Ripple Buttons</h1>
-        <button class="mtrl-btn-ripple"><a class="ripple">Button</a></button>
-        <button class="mtrl-btn-ripple"><a class="ripple">Button</a></button>
-        <button class="mtrl-btn-ripple"><a class="ripple">Button</a></button>
-        <button class="mtrl-btn-ripple"><a class="ripple">Button</a></button>
-        <button class="mtrl-btn-ripple"><a class="ripple">Button</a></button>
+        <button class="ripple"><a class="mtrl-btn">Button</a></button>
+        <button class="ripple"><a class="mtrl-btn mtrl-border">Button</a></button>
+        <button class="ripple"><a class="mtrl-btn mtrl-disabled">Disabled</a></button>
     </div>
-    
-    <button class="mtrl-btn-ripple"><a class="ripple">Button</a></button>
+
     <script src="app.js"></script>
     <script src="./js/ripple.js"></script>
 </body>

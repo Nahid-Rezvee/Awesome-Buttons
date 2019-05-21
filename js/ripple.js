@@ -1,6 +1,6 @@
 "use strict";
 
-const rippleBtns = document.querySelectorAll(".ripple");
+const rippleBtns = document.querySelectorAll(".ripple .mtrl-btn");
 
 function animate(e) {
     const parent = this.parentNode;
