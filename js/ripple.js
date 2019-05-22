@@ -31,7 +31,6 @@ function animate(e) {
     const x = e.pageX - offset.left - ink.offsetWidth / 2;
     const y = e.pageY - offset.top - ink.offsetHeight / 2;
 
-
     ink.style.top = `${y}px`;
     ink.style.left = `${x}px`;
     ink.classList.add("animate");
