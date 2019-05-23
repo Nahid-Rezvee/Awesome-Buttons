@@ -21,7 +21,7 @@ function animate(e) {
     setTimeout(function () {
         var ri = document.querySelector(".ripple");
         ri.parentElement.removeChild(ri)
-    }, 400);
+    }, 300);
 }
 
 

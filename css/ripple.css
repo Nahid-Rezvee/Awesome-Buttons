@@ -7,7 +7,7 @@
     position: absolute;
     background: var(--ripple-effect-color);
     border-radius: 50%;
-    animation: ripple .4s ease-in forwards;
+    animation: ripple .3s ease-in forwards;
 }
 
 @keyframes ripple {

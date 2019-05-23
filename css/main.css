@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root {
-    --ripple-effect-color: #ccc;
+    --ripple-effect-color: rgba(197, 197, 197, 0.5);
     --button-text-color: #36454f;
     --button-border-color: #36454f;
     --disabled-btn-text-color: rgba(0, 0, 0, .26);
@@ -70,12 +70,15 @@ button:focus {
     padding-right: 24px;
 }
 
-.mtrl-btn.mtrl-icon {}
-
-.mtrl-btn.mtrl-icon {}
-
 .mtrl-btn.mtrl-icon-only.mtrl-full-round {
     padding: 4px 16px;
+}
+
+.mtrl-btn.mtrl-icon-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    justify-content: center;
 }
 
 .mtrl-btn.mtrl-icon-text .material-icons {

@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- Code Snippet Modal -->
     <div class="snippet-modal-background">
         <div class="snippet-modal">
             <h1>
@@ -23,7 +24,7 @@
             </h1>
             <div class="modal-body">
                 <span class="snippet-bar">&nbsp</span>
-                <textarea name="code-snippet" id="code-snippet"></textarea>
+                <textarea name="code-snippet" id="code-snippet" readonly></textarea>
             </div>
             <div class="modal-footer">
                 <button class="mtrl-btn mtrl-full-round mtrl-icon-text mtrl-shadow mtrl-btn-ripple"
@@ -34,7 +35,9 @@
             </div>
         </div>
     </div>
+
     <div class="showcase">
+        <!-- Basic Buttons -->
         <div class="basic-btn-section btn-section">
             <h1>Basic Buttons</h1>
             <div class="button-container">
@@ -43,6 +46,7 @@
             </div>
         </div>
 
+        <!-- Bordered Buttons -->
         <div class="bordered-btn-section btn-section">
             <h1>Bordered Buttons</h1>
             <div class="button-container">
@@ -51,6 +55,7 @@
             </div>
         </div>
 
+        <!-- Mini Rounded Buttons -->
         <div class="mini-rounded-btn-section btn-section">
             <h1>Mini Rounded Buttons</h1>
             <div class="button-container">
@@ -60,17 +65,20 @@
             </div>
         </div>
 
+        <!-- Full Rounded Buttons -->
         <div class="full-rounded-btn-section btn-section">
             <h1>Full Rounded Buttons</h1>
             <div class="button-container">
                 <button class="mtrl-btn mtrl-full-round">Button</button>
-                <button class="mtrl-btn mtrl-full-roundmtrl-border ">Button</button>
+                <button class="mtrl-btn mtrl-full-round mtrl-border ">Button</button>
                 <button class="mtrl-btn mtrl-full-round mtrl-border mtrl-disabled">Button</button>
             </div>
         </div>
 
+        <!-- Icon Buttons -->
         <div class="icon-btn-section btn-section">
             <h1>Icon Buttons</h1>
+
             <h2>Icon Only</h2>
             <div class="button-container">
                 <button class="mtrl-btn mtrl-icon-only">
@@ -93,6 +101,20 @@
                     <i class="material-icons">input</i>
                 </button>
             </div>
+
+            <h2>Icon Circle</h2>
+            <div class="button-container">
+                <button class="mtrl-btn mtrl-icon-circle">
+                    <i class="material-icons">done_outline</i>
+                </button>
+                <button class="mtrl-btn mtrl-icon-circle mtrl-border">
+                    <i class="material-icons">search</i>
+                </button>
+                <button class="mtrl-btn mtrl-icon-circle mtrl-border mtrl-disabled">
+                    <i class="material-icons">whatshot</i>
+                </button>
+            </div>
+
             <h2>Icon With Text</h2>
             <div class="button-container">
                 <button class="mtrl-btn mtrl-icon-text">
@@ -115,8 +137,10 @@
                     <i class="material-icons">add_shopping_cart</i>Button
                 </button>
             </div>
+
         </div>
 
+        <!-- Shadwo Buttons -->
         <div class="shadow-btn-section btn-section">
             <h1>Shadow Buttons</h1>
             <h2>Basic Buttons</h2>
@@ -164,6 +188,20 @@
                     <i class="material-icons">input</i>
                 </button>
             </div>
+
+            <h3>Icon Circle</h3>
+            <div class="button-container">
+                <button class="mtrl-btn mtrl-icon-circle mtrl-shadow">
+                    <i class="material-icons">done_outline</i>
+                </button>
+                <button class="mtrl-btn mtrl-icon-circle mtrl-border mtrl-shadow">
+                    <i class="material-icons">search</i>
+                </button>
+                <button class="mtrl-btn mtrl-icon-circle mtrl-border mtrl-shadow mtrl-disabled">
+                    <i class="material-icons">whatshot</i>
+                </button>
+            </div>
+
             <h3>Icon With Text</h3>
             <div class="button-container">
                 <button class="mtrl-btn mtrl-icon-text mtrl-shadow">
@@ -171,7 +209,7 @@
                 </button>
 
                 <button class="mtrl-btn mtrl-mini-round mtrl-icon-text mtrl-shadow">
-                    <i class="material-icons">drag_indicator</i>Button
+                    <i class="material-icons">refresh</i>Button
                 </button>
 
                 <button class="mtrl-btn mtrl-full-round mtrl-icon-text mtrl-shadow">
@@ -185,18 +223,98 @@
 
         </div>
 
+        <!-- Ripple Buttons -->
         <div class="ripple-btn-section btn-section">
             <h1>Ripple Buttons</h1>
+
+            <h2>Basic Buttons</h2>
             <div class="button-container">
-
                 <button class="mtrl-btn mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-shadow mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-btn-ripple mtrl-disabled">Button</button>
+                <button class="mtrl-btn mtrl-shadow mtrl-btn-ripple mtrl-disabled">Button</button>
+            </div>
 
+            <h2>Bordered Buttons</h2>
+            <div class="button-container">
+                <button class="mtrl-btn mtrl-border mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-border mtrl-shadow mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-border mtrl-btn-ripple mtrl-disabled">Button</button>
+                <button class="mtrl-btn mtrl-border mtrl-shadow mtrl-btn-ripple mtrl-disabled">Button</button>
+            </div>
+
+            <h2>Mini Rounded Buttons</h2>
+            <div class="button-container">
+                <button class="mtrl-btn mtrl-mini-round mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-mini-round mtrl-shadow mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-border mtrl-mini-round mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-border mtrl-mini-round mtrl-btn-ripple mtrl-shadow">Button</button>
+                <button class="mtrl-btn mtrl-border mtrl-mini-round mtrl-btn-ripple mtrl-disabled">Button</button>
+                <button class="mtrl-btn mtrl-border mtrl-mini-round mtrl-btn-ripple mtrl-shadow mtrl-disabled">Button</button>
+            </div>
+
+            <h2>Full Rounded Buttons</h2>
+            <div class="button-container">
+                <button class="mtrl-btn mtrl-full-round mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-full-round mtrl-shadow mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-full-round mtrl-border mtrl-btn-ripple">Button</button>
+                <button class="mtrl-btn mtrl-full-round mtrl-border mtrl-btn-ripple mtrl-shadow">Button</button>
+                <button class="mtrl-btn mtrl-full-round mtrl-border mtrl-btn-ripple mtrl-disabled">Button</button>
+                <button class="mtrl-btn mtrl-full-round mtrl-border mtrl-btn-ripple mtrl-shadow mtrl-disabled">Button</button>
+            </div>
+
+            <h2>Icon Buttons With Ripple Effect</h2>
+            <div class="button-container">
                 <button class="mtrl-btn mtrl-icon-only mtrl-btn-ripple">
+                    <i class="material-icons">restaurant_menu</i>
+                </button>
+
+                <button class="mtrl-btn mtrl-border mtrl-mini-round mtrl-icon-only mtrl-btn-ripple">
+                    <i class="material-icons">search</i>
+                </button>
+
+                <button class="mtrl-btn mtrl-shadow mtrl-mini-round mtrl-icon-only mtrl-btn-ripple">
+                    <i class="material-icons">add_photo_alternate</i>
+                </button>
+
+                <button class="mtrl-btn mtrl-full-round mtrl-icon-only mtrl-btn-ripple">
                     <i class="material-icons">done_outline</i>
+                </button>
+
+                <button class="mtrl-btn mtrl-shadow mtrl-full-round mtrl-icon-only mtrl-btn-ripple">
+                    <i class="material-icons">shopping_cart</i>
+                </button>
+
+                <button class="mtrl-btn mtrl-border mtrl-full-round mtrl-icon-only mtrl-btn-ripple">
+                    <i class="material-icons">edit</i>
+                </button>
+
+                <button class="mtrl-btn mtrl-icon-circle mtrl-btn-ripple">
+                    <i class="material-icons">whatshot</i>
+                </button>
+
+                <button class="mtrl-btn mtrl-icon-circle mtrl-border mtrl-btn-ripple">
+                    <i class="material-icons">security</i>
+                </button>
+
+                <button class="mtrl-btn mtrl-icon-circle mtrl-shadow mtrl-btn-ripple">
+                    <i class="material-icons">thumb_up_alt</i>
                 </button>
 
                 <button class="mtrl-btn mtrl-icon-text mtrl-btn-ripple">
                     <i class="material-icons">check_circle_outline</i>Button
+                </button>
+
+                <button class="mtrl-btn mtrl-mini-round mtrl-icon-text mtrl-shadow mtrl-btn-ripple">
+                    <i class="material-icons">phone_missed</i>Button
+                </button>
+
+                <button class="mtrl-btn mtrl-full-round mtrl-icon-text mtrl-shadow mtrl-btn-ripple">
+                    <i class="material-icons">add_shopping_cart</i>Button
+                </button>
+
+                <button class="mtrl-btn mtrl-full-round mtrl-icon-text mtrl-shadow mtrl-btn-ripple mtrl-disabled">
+                    <i class="material-icons">wifi_off</i>Button
                 </button>
             </div>
         </div>

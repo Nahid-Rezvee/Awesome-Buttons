@@ -21,10 +21,12 @@ h3 {
 .button-container {
     display: flex;
     margin: 2rem 0;
+    flex-wrap: wrap;
 }
 
 .button-container button {
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .snippet-modal-background {
@@ -46,7 +48,7 @@ h3 {
 
 .snippet-modal {
     width: 60%;
-    min-width: 700px;
+    min-width: 762px;
     padding: 2rem;
     background-color: #fff;
     border-radius: 10px;
@@ -85,6 +87,7 @@ h3 {
     padding: 1rem;
     outline: none;
     border: none;
+    resize: none;
 }
 
 .modal-footer {
