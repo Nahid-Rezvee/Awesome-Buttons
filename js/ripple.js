@@ -1,39 +1,28 @@
-"use strict";
-
-const rippleBtns = document.querySelectorAll(".ripple .mtrl-btn");
+const rippleBtns = document.querySelectorAll(".mtrl-btn-ripple");
 
 function animate(e) {
-    const parent = this.parentNode;
+    var rect = e.target.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    var y = e.clientY - rect.top;
 
-    if (parent.querySelectorAll(".ink").length === 0) {
-        const span = document.createElement("span");
-        span.classList.add("ink");
-        parent.insertBefore(span, parent.firstChild);
-    }
+    var w = this.offsetWidth,
+        h = this.offsetHeight;
+    w = Math.max(w, h);
 
-    const ink = parent.querySelectorAll(".ink")[0];
+    var ripple = document.createElement('span');
+    ripple.classList.add('ripple');
 
-    ink.classList.remove("animate");
+    ripple.style.width = ripple.style.height = w + "px";
 
-    if (!ink.offsetHeight && !ink.offsetWidth) {
-        const d = Math.max(parent.offsetHeight, parent.offsetWidth);
-        ink.style.height = `${d}px`;
-        ink.style.width = `${d}px`;
-    }
+    ripple.style.left = x - w / 2 + "px";
+    ripple.style.top = y - w / 2 + "px";
 
-    const rect = parent.getBoundingClientRect();
-
-    const offset = {
-        top: rect.top + document.body.scrollTop,
-        left: rect.left + document.body.scrollLeft
-    }
-
-    const x = e.pageX - offset.left - ink.offsetWidth / 2;
-    const y = e.pageY - offset.top - ink.offsetHeight / 2;
-
-    ink.style.top = `${y}px`;
-    ink.style.left = `${x}px`;
-    ink.classList.add("animate");
+    this.appendChild(ripple);
+    setTimeout(function () {
+        var ri = document.querySelector(".ripple");
+        ri.parentElement.removeChild(ri)
+    }, 400);
 }
 
-rippleBtns.forEach(link => link.addEventListener("click", animate));
+
+rippleBtns.forEach(link => link.addEventListener("mousedown", animate));
