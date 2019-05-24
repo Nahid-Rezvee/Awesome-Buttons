@@ -12,7 +12,7 @@
 
 @keyframes ripple {
     from {
-        opacity: 1;
+        opacity: .5;
         transform: scale(0);
     }
 

@@ -1,28 +1,70 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-:root {
-    --ripple-effect-color: rgba(197, 197, 197, 0.5);
-    --button-text-color: #36454f;
-    --button-border-color: #36454f;
+/* ==================== Variables ======================= */
+/* default */
+.mtrl-btn {
+    --primary-color: #766dff;
+    --accent-color: #86e8ff;
+    --warning-color: #EFCB68;
+    --danger-color: #FE4A49;
+    --dark-color: #39393A;
+    --light-color: #fff;
+
+    --button-text-color: var(--dark-color);
+    --button-border-color: var(--dark-color);
+    --button-background-color: var(--light-color);
+
+    --ripple-effect-color: rgb(179, 179, 179);
+
     --disabled-btn-text-color: rgba(0, 0, 0, .26);
     --disabled-btn-border-color: rgba(0, 0, 0, .26);
+    --disabled-btn-background-color: var(--light-color);
+
     --font: Raleway;
+    --font-weight: 500;
+    --font-size: 14px;
+    --line-height: 28px;
+}
+
+/* primary */
+.mtrl-btn.mtrl-primary-stroke {
+    --button-text-color: var(--primary-color);
+    --button-border-color: var(--primary-color);
+    --ripple-effect-color: var(--primary-color);
+}
+
+.mtrl-btn.mtrl-primary-fill {
+    --button-text-color: var(--light-color);
+    --button-border-color: var(--primary-color);
+    --button-background-color: var(--primary-color);
+}
+
+/* Accent */
+.mtrl-btn.mtrl-accent-stroke {
+    --button-text-color: var(--accent-color);
+    --button-border-color: var(--accent-color);
+    --ripple-effect-color: var(--accent-color);
+}
+
+.mtrl-btn.mtrl-accent-fill {
+    --button-text-color: var(--light-color);
+    --button-border-color: var(--accent-color);
+    --button-background-color: var(--accent-color);
 }
 
 button {
-    display: inline-block;
     border: none;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    background: #fff;
+    background: var(--light-color);
     font-family: sans-serif;
     font-size: 14px;
     cursor: pointer;
     text-align: center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
+    user-select: none;
 }
 
 button:focus {
@@ -31,16 +73,19 @@ button:focus {
 }
 
 .mtrl-btn {
-    font: normal 14px/28px var(--font) !important;
-    font-weight: 600;
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
 
     color: var(--button-text-color);
-    cursor: pointer;
+    background-color: var(--button-background-color);
+    border-color: var(--button-border-color);
 
+    cursor: pointer;
     position: relative;
     overflow: hidden;
-    user-select: none;
-
     display: inline-flex;
     align-items: center;
     padding: 4px 16px;
@@ -50,7 +95,7 @@ button:focus {
     pointer-events: none;
     color: var(--disabled-btn-text-color) !important;
     border-color: var(--disabled-btn-border-color) !important;
-    border: none;
+    background: var(--disabled-btn-background-color) !important;
 }
 
 .mtrl-btn.mtrl-border {
@@ -94,12 +139,47 @@ button:focus {
 }
 
 
-.mtrl-shadow {
+.mtrl-btn.mtrl-shadow {
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     transition-delay: .2s;
     transition: all .3s;
 }
 
-.mtrl-shadow:active {
+.mtrl-btn.mtrl-shadow:active {
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+}
+
+.mtrl-btn.mtrl-primary-accent-gradiant-fill {
+    background-image: linear-gradient(to right, var(--primary-color) 0%, var(--accent-color) 48%, var(--primary-color) 100%);
+    color: var(--light-color);
+    background-size: 200% auto;
+    transition: all .3s linear 0s;
+}
+
+.mtrl-btn.mtrl-primary-accent-gradiant-fill:hover {
+    background-position: right center;
+}
+
+.mtrl-btn.mtrl-primary-accent-gradiant-stroke {
+
+    --ripple-effect-color: linear-gradient(to right, var(--primary-color) 0%, var(--accent-color) 48%, var(--primary-color) 100%);
+
+    background-image: linear-gradient(to right, var(--primary-color) 0%, var(--accent-color) 48%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    background-size: 200% auto;
+    transition: all .3s linear 0s;
+}
+
+.mtrl-btn.mtrl-primary-accent-gradiant-stroke.mtrl-disabled {
+    background-image: linear-gradient(to right, var(--primary-color) 0%, var(--accent-color) 48%, var(--primary-color) 100%);
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: var(--disabled-btn-text-color);
+}
+
+.mtrl-btn.mtrl-primary-accent-gradiant-stroke:hover {
+    background-position: right center;
 }

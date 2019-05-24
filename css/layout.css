@@ -2,7 +2,7 @@ p,
 h1,
 h2,
 h3 {
-    font-family: var(--font);
+    font-family: Raleway;
 }
 
 .showcase {
@@ -96,7 +96,7 @@ h3 {
 }
 
 .copied-tooltip {
-    font-family: var(--font);
+    font-family: Raleway;
     padding: 7px 10px;
     background-color: #7f7f7f;
     color: #fff;
