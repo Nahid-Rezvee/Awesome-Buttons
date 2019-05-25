@@ -22,9 +22,10 @@ isDropdownActive = false;
 isSettingsActive = false;
 
 function showCode(e) {
-    const rx = new RegExp("<span[\\d\\D]*?\/span>", "g");
+    const spanTokenizeRX = new RegExp("<span[\\d\\D]*?\/span>", "g");
+    this.removeAttribute("style");
     let code = this.outerHTML.replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ");
-    code = code.replace(rx, "");
+    code = code.replace(spanTokenizeRX, "");
     codeSnippet.innerHTML = code;
     showModal();
 }

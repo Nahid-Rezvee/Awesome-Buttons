@@ -125,6 +125,8 @@ button:focus {
     -ms-flex-align: center;
     align-items: center;
     padding: 4px 16px;
+    white-space: nowrap;
+    width: auto;
 }
 
 .mtrl-btn.mtrl-disabled {
