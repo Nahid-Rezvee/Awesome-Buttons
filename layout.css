@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -36,7 +40,7 @@ input {
     width: 250px;
     position: fixed;
     z-index: 4;
-    right: -100%;
+    right: -266px;
     top: 4.1rem;
     transition: right .3s linear;
 }
@@ -54,10 +58,10 @@ input {
 .settings {
     background-color: #fff;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    width: 300px;
+    width: 250px;
     position: fixed;
     z-index: 3;
-    right: -317px;
+    right: -266px;
     top: 18rem;
     transition: right .2s linear;
 }
@@ -106,21 +110,28 @@ input {
     background-color: #fff;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     height: 100%;
-    width: 180px;
-    padding: 5rem 1rem;
+    width: 250px;
+    padding: 4rem 0;
     position: fixed;
     z-index: 1;
-    left: -100%;
-    transition: left .3s linear;
+    left: -250px;
+    transition: left .2s linear;
+}
+
+@media only screen and (max-height: 859px) {
+    .sidemenu {
+        overflow-y: scroll;
+    }
 }
 
 .sidemenu.show {
     left: 0;
 }
 
-.sidemenu button {
+.sidemenu .mtrl-btn {
     width: 100%;
-    margin-bottom: 1rem;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .snippet-modal-background {
@@ -221,11 +232,15 @@ input {
 
 .showcase {
     padding: 4rem 2rem 2rem;
-    transition: padding .2s linear .1s;
+    transition: padding .2s linear;
+}
+
+.showcase>div {
+    padding-top: 4.3rem;
 }
 
 .showcase.shrink {
-    padding-left: 230px;
+    padding-left: 282px;
 }
 
 .btn-section h1 {
