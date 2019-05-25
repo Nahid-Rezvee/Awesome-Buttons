@@ -5,7 +5,8 @@
 .mtrl-btn {
     --primary-color: #766dff;
     --accent-color: #86e8ff;
-    --warning-color: #EFCB68;
+    --warning-color: #ffc000;
+    /* --warning-color: #e9692c; */
     --danger-color: #FE4A49;
     --dark-color: #39393A;
     --light-color: #fff;
@@ -50,6 +51,32 @@
     --button-text-color: var(--light-color);
     --button-border-color: var(--accent-color);
     --button-background-color: var(--accent-color);
+}
+
+/* Warning */
+.mtrl-btn.mtrl-warning-stroke {
+    --button-text-color: var(--warning-color);
+    --button-border-color: var(--warning-color);
+    --ripple-effect-color: var(--warning-color);
+}
+
+.mtrl-btn.mtrl-warning-fill {
+    --button-text-color: var(--light-color);
+    --button-border-color: var(--warning-color);
+    --button-background-color: var(--warning-color);
+}
+
+/* Danger */
+.mtrl-btn.mtrl-danger-stroke {
+    --button-text-color: var(--danger-color);
+    --button-border-color: var(--danger-color);
+    --ripple-effect-color: var(--danger-color);
+}
+
+.mtrl-btn.mtrl-danger-fill {
+    --button-text-color: var(--light-color);
+    --button-border-color: var(--danger-color);
+    --button-background-color: var(--danger-color);
 }
 
 button,
@@ -167,6 +194,7 @@ button:focus {
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 }
 
+/* Primary - Accent Gradiant */
 .mtrl-btn.mtrl-primary-accent-gradiant-fill {
     background-image: -webkit-gradient(linear, left top, right top, from(var(--primary-color)), color-stop(48%, var(--accent-color)), to(var(--primary-color)));
     background-image: -webkit-linear-gradient(left, var(--primary-color) 0%, var(--accent-color) 48%, var(--primary-color) 100%);
@@ -215,6 +243,58 @@ button:focus {
 }
 
 .mtrl-btn.mtrl-primary-accent-gradiant-stroke:hover {
+    background-position: right center;
+}
+
+/* Primary - Accent Gradiant */
+.mtrl-btn.mtrl-warning-danger-gradiant-fill {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--warning-color)), color-stop(48%, var(--danger-color)), to(var(--warning-color)));
+    background-image: -webkit-linear-gradient(left, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+    background-image: -o-linear-gradient(left, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+    background-image: linear-gradient(to right, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+    color: var(--light-color);
+    background-size: 200% auto;
+    -webkit-transition: all .3s linear 0s;
+    -o-transition: all .3s linear 0s;
+    transition: all .3s linear 0s;
+}
+
+.mtrl-btn.mtrl-warning-danger-gradiant-fill:hover {
+    background-position: right center;
+}
+
+.mtrl-btn.mtrl-warning-danger-gradiant-stroke {
+
+    --ripple-effect-color: linear-gradient(to right, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--warning-color)), color-stop(48%, var(--danger-color)), to(var(--warning-color)));
+
+    background-image: -webkit-linear-gradient(left, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+
+    background-image: -o-linear-gradient(left, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+
+    background-image: linear-gradient(to right, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-color: var(--warning-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    background-size: 200% auto;
+    -webkit-transition: all .3s linear 0s;
+    -o-transition: all .3s linear 0s;
+    transition: all .3s linear 0s;
+}
+
+.mtrl-btn.mtrl-warning-danger-gradiant-stroke.mtrl-disabled {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--warning-color)), color-stop(48%, var(--danger-color)), to(var(--warning-color)));
+    background-image: -webkit-linear-gradient(left, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+    background-image: -o-linear-gradient(left, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+    background-image: linear-gradient(to right, var(--warning-color) 0%, var(--danger-color) 48%, var(--warning-color) 100%);
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: var(--disabled-btn-text-color);
+}
+
+.mtrl-btn.mtrl-warning-danger-gradiant-stroke:hover {
     background-position: right center;
 }
 
