@@ -6,7 +6,9 @@ p,
 h1,
 h2,
 h3,
-li {
+li,
+label,
+input {
     font-family: Raleway;
     color: #39393A;
 }
@@ -23,6 +25,7 @@ li {
     display: flex;
     justify-content: space-between;
 }
+
 .navbar h1 {
     margin: 0;
 }
@@ -37,12 +40,59 @@ li {
     top: 4.1rem;
     transition: right .3s linear;
 }
+
 .dropdown.show {
     right: 5px;
 }
+
 .dropdown a {
     width: 100%;
     padding: 7px 1rem;
+}
+
+
+.settings {
+    background-color: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    width: 300px;
+    position: fixed;
+    z-index: 3;
+    right: -317px;
+    top: 18rem;
+    transition: right .2s linear;
+}
+
+.settings div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 5px solid #ffffff;
+}
+.settings .submit-btn {
+    text-align: center;
+}
+
+.settings .setting-switcher {
+    transform: translateX(-50%);
+    display: inline-block;
+}
+
+.settings .setting-switcher button {
+    padding-left: 20px;
+}
+
+.settings div input {
+    width: 100px;
+    padding: 7px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.settings.show {
+    right: 5px;
 }
 
 .sidemenu {
@@ -166,6 +216,7 @@ li {
     padding: 4rem 2rem 2rem;
     transition: padding .2s linear .1s;
 }
+
 .showcase.shrink {
     padding-left: 230px;
 }

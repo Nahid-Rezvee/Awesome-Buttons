@@ -36,6 +36,46 @@
                 class="material-icons">save_alt</i>Download Minified CSS</a>
     </div>
 
+    <!-- Settings -->
+    <div class="settings">
+        <span class="setting-switcher">
+            <button onclick="toggleSettings()"
+                class="mtrl-btn mtrl-full-round mtrl-icon-text mtrl-shadow mtrl-btn-ripple mtrl-primary-accent-gradiant-fill">
+                <i class="material-icons">settings</i>Theming
+            </button>
+        </span>
+        <div>
+            <label for="primary">Primary Color</label>
+            <input type="text" id="primary" name="primary" value="#766dff">
+        </div>
+        <div>
+            <label for="accent">Accent Color</label>
+            <input type="text" id="accent" name="accent" value="#86e8ff">
+        </div>
+        <div>
+            <label for="warning">Warning Color</label>
+            <input type="text" id="warning" name="warning" value="#ffc000">
+        </div>
+        <div>
+            <label for="danger">Danger Color</label>
+            <input type="text" id="danger" name="danger" value="#FE4A49">
+        </div>
+        <div>
+            <label for="dark">Dark Color</label>
+            <input type="text" id="dark" name="dark" value="#39393A">
+        </div>
+        <div>
+            <label for="light">Light Color</label>
+            <input type="text" id="light" name="light" value="#fff">
+        </div>
+        <p class="submit-btn">
+            <button onclick="updateTheme()"
+                class="mtrl-btn mtrl-full-round mtrl-shadow mtrl-btn-ripple mtrl-primary-accent-gradiant-fill">
+                Update
+            </button>
+        </p>
+    </div>
+
     <!-- Sidemenu -->
     <div class="sidemenu">
         <button class="mtrl-btn mtrl-mini-round mtrl-shadow mtrl-btn-ripple">Button</button>
