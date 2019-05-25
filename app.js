@@ -30,8 +30,6 @@ function showCode(e) {
     showModal();
 }
 
-updateTheme();
-
 settingsInputDoms.forEach(input => {
     input.addEventListener('keydown', function onEvent(event) {
         if (event.key === "Enter") {
@@ -164,3 +162,6 @@ function updateTheme() {
     });
 
 }
+
+toggleSidemenu();
+updateTheme();
