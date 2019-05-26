@@ -13,7 +13,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <header class="navbar">
         <button onclick="toggleSidemenu()" class="mtrl-btn mtrl-full-round mtrl-icon-only mtrl-btn-ripple">
             <i class="material-icons">subject</i>
         </button>
@@ -21,7 +21,7 @@
         <button onclick="toggleDropdown()" class="mtrl-btn mtrl-full-round mtrl-icon-only mtrl-btn-ripple">
             <i class="material-icons">code</i>
         </button>
-    </nav>
+    </header>
 
     <!-- Dropdown -->
     <div class="dropdown">
@@ -73,7 +73,7 @@
     </div>
 
     <!-- Sidemenu -->
-    <div class="sidemenu">
+    <nav class="sidemenu">
         <a class="mtrl-btn mtrl-btn-ripple" href="#basic">Basic Buttons</a>
         <a class="mtrl-btn mtrl-btn-ripple" href="#border">Border Buttons</a>
         <a class="mtrl-btn mtrl-btn-ripple" href="#mini-round">Mini Rounded Buttons</a>
@@ -93,7 +93,7 @@
         <a class="mtrl-btn mtrl-btn-ripple" href="#danger-fill">Danger-Fill Buttons</a>
         <a class="mtrl-btn mtrl-btn-ripple" href="#warning-danger-gradiant-stroke">Warning-Danger Gradiant Stroke</a>
         <a class="mtrl-btn mtrl-btn-ripple" href="#warning-danger-gradiant-fill">Warning-Danger Gradiant Fill</a>
-    </div>
+    </nav>
 
     <!-- Code Snippet Modal -->
     <div class="snippet-modal-background">
@@ -118,7 +118,8 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- Showcase -->
     <div class="showcase">
         <!-- Basic Buttons -->
         <div class="basic-btn-section btn-section" id="basic">
@@ -1722,6 +1723,62 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="buy-me-a-coffee">
+            <h2>Buy Me A Coffee</h2>
+            <div class="cover-img-container">
+                <img src="./assets/coffee.svg" alt="buy me a coffee" class="cover-svg">
+            </div>
+            <a class="mtrl-btn mtrl-full-round mtrl-shadow mtrl-primary-accent-gradiant-stroke mtrl-btn-ripple">
+                <img src="./assets/coffee_mug.png" alt="buy me a coffee"> &nbsp;&nbsp; Buy Me A Coffee
+            </a>
+        </div>
+
+        <div class="hire-me">
+            <h2>Hire Me</h2>
+            <div class="cover-img-container">
+                <img src="./assets/hire.svg" alt="buy me a coffee" class="cover-svg">
+            </div>
+            <a class="mtrl-btn mtrl-full-round mtrl-shadow mtrl-primary-accent-gradiant-stroke mtrl-btn-ripple">
+                Hire Me
+            </a>
+        </div>
+
+        <div class="say-something">
+            <h2>Say Something</h2>
+            <div class="cover-img-container">
+                <img src="./assets/message.svg" alt="buy me a coffee" class="cover-svg">
+            </div>
+            <a class="mtrl-btn mtrl-full-round mtrl-shadow mtrl-primary-accent-gradiant-stroke mtrl-btn-ripple">
+                Say Something
+            </a>
+        </div>
+
+        <div class="follow-me">
+            <h2>Follow Me</h2>
+            <div class="cover-img-container">
+                <img src="./assets/social.svg" alt="buy me a coffee" class="cover-svg">
+            </div>
+            <div>
+                <a class="mtrl-btn mtrl-icon-circle mtrl-shadow mtrl-btn-ripple mtrl-primary-accent-gradiant-stroke" href="https://www.linkedin.com/in/abdunnahid/" target="_blank">
+                    <img src="./assets/linkedin.png" alt="buy me a coffee">
+                </a>
+                <a class="mtrl-btn mtrl-icon-circle mtrl-shadow mtrl-btn-ripple mtrl-primary-accent-gradiant-stroke">
+                    <img src="./assets/github.png" alt="buy me a coffee">
+                </a>
+                <a class="mtrl-btn mtrl-icon-circle mtrl-shadow mtrl-btn-ripple mtrl-primary-accent-gradiant-stroke">
+                    <img src="./assets/twitter.png" alt="buy me a coffee">
+                </a>
+                <a class="mtrl-btn mtrl-icon-circle mtrl-shadow mtrl-btn-ripple mtrl-primary-accent-gradiant-stroke">
+                    <img src="./assets/instagram.png" alt="buy me a coffee">
+                </a>
+            </div>
+        </div>
+
+    </footer>
 
     <script src="app.js"></script>
     <script src="./js/mtrl-buttons.js"></script>
