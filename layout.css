@@ -128,11 +128,12 @@ input {
 
 .sidemenu {
     background-color: #f9fafb;
-    height: 100%;
+    height: calc(100% - 4rem);
     width: 250px;
-    padding: 4rem 0;
     position: fixed;
     z-index: 1;
+    padding: 1rem 0;
+    top: 4rem;
     left: -250px;
     -webkit-transition: left .2s linear;
     -o-transition: left .2s linear;
