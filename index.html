@@ -72,6 +72,36 @@
         </p>
     </div>
 
+    <!-- Say Something -->
+    <div class="say-something-modal-background">
+        <div class="say-something-modal">
+            <h1>
+                <span>Say Something</span>
+                <button class="mtrl-btn mtrl-icon-circle mtrl-shadow mtrl-btn-ripple mtrl-warning-danger-gradiant-fill"
+                    onclick="toggleSaySomething()">
+                    <i class="material-icons">close</i>
+                </button>
+            </h1>
+            <div class="modal-body">
+                <div>
+                    <label for="who">Who are you?</label>
+                    <input name="code-snippet" id="who" readonly></input>
+                </div>
+                <div>
+                    <label for="message">Say whatever you want</label>
+                    <textarea name="code-snippet" id="message" readonly></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="saySomething()"
+                    class="mtrl-btn mtrl-full-round mtrl-shadow mtrl-btn-ripple mtrl-primary-accent-gradiant-fill">
+                    Say
+                </button>
+                <span class="copied-tooltip">Copied.</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Sidemenu -->
     <nav class="sidemenu">
         <a class="mtrl-btn mtrl-btn-ripple" href="#basic">Basic Buttons</a>
@@ -1753,7 +1783,7 @@
                 <div class="cover-img-container">
                     <img src="./assets/message.svg" alt="buy me a coffee" class="cover-svg">
                 </div>
-                <a class="mtrl-btn mtrl-full-round mtrl-shadow mtrl-primary-accent-gradiant-stroke mtrl-btn-ripple">
+                <a class="mtrl-btn mtrl-full-round mtrl-shadow mtrl-primary-accent-gradiant-stroke mtrl-btn-ripple" onclick="toggleSaySomething()">
                     Say Something
                 </a>
             </div>

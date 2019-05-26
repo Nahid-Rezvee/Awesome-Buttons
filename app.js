@@ -2,6 +2,7 @@ var mtrlButtons = document.querySelectorAll(".showcase .mtrl-btn");
 var modal = document.querySelector(".snippet-modal-background");
 var dropdown = document.querySelector(".dropdown");
 var settings = document.querySelector(".settings");
+var saySomething = document.querySelector(".say-something-modal-background");
 var sidemenu = document.querySelector(".sidemenu");
 var showcase = document.querySelector(".showcase");
 var copiedTooltip = document.querySelector(".copied-tooltip");
@@ -20,6 +21,7 @@ isToolTipActive = false;
 isSideMenuActive = false;
 isDropdownActive = false;
 isSettingsActive = false;
+isSaySomethingActive = false;
 
 function showCode(e) {
     const spanTokenizeRX = new RegExp("<span[\\d\\D]*?\/span>", "g");
@@ -92,6 +94,24 @@ function showDropdown() {
 function hideDropdown() {
     dropdown.classList.remove('show');
     isDropdownActive = false;
+}
+
+function toggleSaySomething() {
+    if (isSaySomethingActive) {
+        hideSaySomething();
+    } else {
+        showSaySomething();
+    }
+}
+
+function showSaySomething() {
+    saySomething.classList.add('show');
+    isSaySomethingActive = true;
+}
+
+function hideSaySomething() {
+    saySomething.classList.remove('show');
+    isSaySomethingActive = false;
 }
 
 function toggleSettings() {
