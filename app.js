@@ -1,27 +1,26 @@
-var mtrlButtons = document.querySelectorAll(".showcase .mtrl-btn");
-var modal = document.querySelector(".snippet-modal-background");
-var dropdown = document.querySelector(".dropdown");
-var settings = document.querySelector(".settings");
-var saySomething = document.querySelector(".say-something-modal-background");
-var sidemenu = document.querySelector(".sidemenu");
-var showcase = document.querySelector(".showcase");
-var copiedTooltip = document.querySelector(".copied-tooltip");
-var codeSnippet = document.querySelector("#code-snippet");
+const mtrlButtons = document.querySelectorAll(".showcase .mtrl-btn");
+const modal = document.querySelector(".snippet-modal-background");
+const dropdown = document.querySelector(".dropdown");
+const settings = document.querySelector(".settings");
+const saySomethingModalDOM = document.querySelector(".say-something-modal-background");
+const sidemenu = document.querySelector(".sidemenu");
+const showcase = document.querySelector(".showcase");
+const copiedTooltip = document.querySelector(".copied-tooltip");
+const codeSnippet = document.querySelector("#code-snippet");
 
 // Theme Variables
-var primaryColorInputDOM = document.querySelector("#primary");
-var accentColorInputDOM = document.querySelector("#accent");
-var warningColorInputDOM = document.querySelector("#warning");
-var dangerColorInputDOM = document.querySelector("#danger");
-var darkColorInputDOM = document.querySelector("#dark");
-var lightColorInputDOM = document.querySelector("#light");
-var settingsInputDoms = document.querySelectorAll(".settings input");
+const primaryColorInputDOM = document.querySelector("#primary");
+const accentColorInputDOM = document.querySelector("#accent");
+const warningColorInputDOM = document.querySelector("#warning");
+const dangerColorInputDOM = document.querySelector("#danger");
+const darkColorInputDOM = document.querySelector("#dark");
+const lightColorInputDOM = document.querySelector("#light");
+const settingsInputDoms = document.querySelectorAll(".settings input");
 
-isToolTipActive = false;
-isSideMenuActive = false;
-isDropdownActive = false;
-isSettingsActive = false;
-isSaySomethingActive = false;
+var isSideMenuActive = false;
+var isDropdownActive = false;
+var isSettingsActive = false;
+var isSaySomethingActive = false;
 
 function showCode(e) {
     const spanTokenizeRX = new RegExp("<span[\\d\\D]*?\/span>", "g");
@@ -47,7 +46,7 @@ function copyCode() {
     codeSnippet.select();
     document.execCommand("copy");
     clearSelection();
-    showToolTip();
+    showCopiedToolTip();
 }
 
 function showModal() {
@@ -105,12 +104,12 @@ function toggleSaySomething() {
 }
 
 function showSaySomething() {
-    saySomething.classList.add('show');
+    saySomethingModalDOM.classList.add('show');
     isSaySomethingActive = true;
 }
 
 function hideSaySomething() {
-    saySomething.classList.remove('show');
+    saySomethingModalDOM.classList.remove('show');
     isSaySomethingActive = false;
 }
 
@@ -132,15 +131,11 @@ function hideSettings() {
     isSettingsActive = false;
 }
 
-function showToolTip() {
-    if (!isToolTipActive) {
-        copiedTooltip.classList.add('show-tooltip');
-        isToolTipActive = true;
-        setTimeout(() => {
-            copiedTooltip.classList.remove('show-tooltip');
-            isToolTipActive = false;
-        }, 1000);
-    }
+function showCopiedToolTip() {
+    copiedTooltip.classList.add('show-tooltip');
+    setTimeout(() => {
+        copiedTooltip.classList.remove('show-tooltip');
+    }, 1000);
 }
 
 function clearSelection() {

@@ -12,7 +12,8 @@ h2,
 h3,
 li,
 label,
-input {
+input,
+span {
     font-family: Raleway;
     color: #39393A;
 }
@@ -204,6 +205,47 @@ input {
     right: -20px;
 }
 
+.say-something-modal-background .say-something-modal div {
+    padding: 1rem 0;
+}
+.say-something-modal-background .say-something-modal .who-input-container span {
+    font-size: 14px;
+    padding: 5px 0;
+}
+.say-something-modal-background .say-something-modal div label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.say-something-modal-background .say-something-modal .modal-body .f-input::placeholder {
+    color: #39393A;
+    opacity: 0.5;
+}
+
+.say-something-modal-background .say-something-modal .modal-body .f-input {
+    background-color: transparent;
+    border: 2px solid #766dff;
+    transition: all 0.3s;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #39393A;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 4px;
+    line-height: 22px;
+    text-align: left;
+}
+
+.say-something-modal-background .say-something-modal .modal-body textarea {
+    height: 200px;
+    line-height: 150%;
+    resize: vertical;
+}
+
 
 .snippet-modal-background {
     background-color: rgba(0, 0, 0, 0.5);
@@ -291,7 +333,8 @@ input {
     align-items: center;
 }
 
-.copied-tooltip {
+.copied-tooltip,
+.said-tooltip {
     font-family: Raleway;
     padding: 7px 10px;
     background-color: #7f7f7f;
@@ -307,7 +350,8 @@ input {
     transition: opacity .3s linear;
 }
 
-.copied-tooltip::before {
+.copied-tooltip::before,
+.said-tooltip::before {
     content: "";
     width: 10px;
     height: 10px;
@@ -321,7 +365,8 @@ input {
     background-color: #7f7f7f;
 }
 
-.copied-tooltip.show-tooltip {
+.copied-tooltip.show-tooltip,
+.said-tooltip.show-tooltip {
     opacity: 1;
 }
 
