@@ -3,6 +3,7 @@ const modal = document.querySelector(".snippet-modal-background");
 const dropdown = document.querySelector(".dropdown");
 const settings = document.querySelector(".settings");
 const saySomethingModalDOM = document.querySelector(".say-something-modal-background");
+const howToModalDOM = document.querySelector(".how-to-modal-background");
 const sidemenu = document.querySelector(".sidemenu");
 const showcase = document.querySelector(".showcase");
 const copiedTooltip = document.querySelector(".copied-tooltip");
@@ -21,6 +22,7 @@ var isSideMenuActive = false;
 var isDropdownActive = false;
 var isSettingsActive = false;
 var isSaySomethingActive = false;
+var isHowToActive = false;
 
 function showCode(e) {
     const spanTokenizeRX = new RegExp("<span[\\d\\D]*?\/span>", "g");
@@ -93,6 +95,26 @@ function showDropdown() {
 function hideDropdown() {
     dropdown.classList.remove('show');
     isDropdownActive = false;
+}
+
+function toggleHowTo() {
+    console.log("TCL: showHowTo -> showHowTo")
+
+    if (isHowToActive) {
+        hideHowTo();
+    } else {
+        showHowTo();
+    }
+}
+
+function showHowTo() {
+    howToModalDOM.classList.add('show');
+    isHowToActive = true;
+}
+
+function hideHowTo() {
+    howToModalDOM.classList.remove('show');
+    isHowToActive = false;
 }
 
 function toggleSaySomething() {

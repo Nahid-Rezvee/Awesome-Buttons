@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Material Buttons</title>
+    <title>Awesome Buttons</title>
 
     <link href="./layout.css" rel="stylesheet">
     <link href="./css/mtrl-buttons.css" rel="stylesheet">
@@ -17,7 +17,7 @@
         <button onclick="toggleSidemenu()" class="mtrl-btn mtrl-full-round mtrl-icon-only mtrl-btn-ripple">
             <i class="material-icons">subject</i>
         </button>
-        <h1>Matrial Buttons</h1>
+        <h1>Awesome Buttons</h1>
         <button onclick="toggleDropdown()" class="mtrl-btn mtrl-full-round mtrl-icon-only mtrl-btn-ripple">
             <i class="material-icons">code</i>
         </button>
@@ -25,7 +25,8 @@
 
     <!-- Dropdown -->
     <div class="dropdown">
-        <a class="mtrl-btn mtrl-icon-text mtrl-btn-ripple"> <i class="material-icons">class</i>How To</a>
+        <a class="mtrl-btn mtrl-icon-text mtrl-btn-ripple" onclick="toggleHowTo()"> <i
+                class="material-icons">class</i>How To</a>
         <a class="mtrl-btn mtrl-icon-text mtrl-btn-ripple" href="js/mtrl-buttons.js" download> <i
                 class="material-icons">save_alt</i>Download Js</a>
         <a class="mtrl-btn mtrl-icon-text mtrl-btn-ripple" href="css/mtrl-buttons.css" download> <i
@@ -70,6 +71,34 @@
                 Update
             </button>
         </p>
+    </div>
+
+    <!-- How To -->
+    <div class="how-to-modal-background">
+        <div class="how-to-modal">
+            <h2 class="modal-header">
+                <span>How To</span>
+                <button class="mtrl-btn mtrl-icon-circle mtrl-shadow mtrl-btn-ripple mtrl-warning-danger-gradiant-fill"
+                    onclick="toggleHowTo()">
+                    <i class="material-icons">close</i>
+                </button>
+            </h2>
+
+            <div class="modal-body">
+                <ul>
+                    <li>Download the js and the css files.</li>
+                    <li>Add it to your index.html.</li>
+                    <li>Click any button you want to use.</li>
+                    <li>Copy code.</li>
+                    <li>Paste on your html.</li>
+                    <li>Thats it. Use it wherever you want. Enjoy!</li>
+                </ul>
+                <p> <b>Note:</b> For disabled buttons add <strong>mtrl-disabled</strong> class on the button.</p>
+                <h2>Licence</h2>
+                <p>MIT</p>
+            </div>
+
+        </div>
     </div>
 
     <!-- Say Something -->
@@ -1816,7 +1845,10 @@
                     </a>
                 </div>
             </div>
+
         </div>
+        <p class="creator">Created By <a href="https://www.linkedin.com/in/abdunnahid/" target="_blank">@abdunnahid</a>
+        </p>
 
     </footer>
 
