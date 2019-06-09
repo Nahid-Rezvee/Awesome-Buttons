@@ -1,6 +1,6 @@
 # Awesome Buttons
 A simple easy to use-ready to go button library for web development.
-
+### [Awesome Buttons Preview](https://button-awesome.web.app/)
 ## How To
 * Download the js and the css files. 
 * Add it to your index.html.
@@ -51,7 +51,7 @@ On top of the _**mtrl-buttons.css**_ file, you will find a css class selector de
 }
 ```
 **Tweak the color variables to match your own color palette.**
-> You can get preview of your color palette on the [Awesome Buttons]()
+> You can get preview of your color palette on the [Awesome Buttons](https://button-awesome.web.app/)
 
 ### Icon
 To change icon, change the icon name inside "<i class="material-icons">**_here_**</i>"
