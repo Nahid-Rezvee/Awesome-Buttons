@@ -98,8 +98,6 @@ function hideDropdown() {
 }
 
 function toggleHowTo() {
-    console.log("TCL: showHowTo -> showHowTo")
-
     if (isHowToActive) {
         hideHowTo();
     } else {
