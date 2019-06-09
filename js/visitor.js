@@ -8,9 +8,34 @@ async function addData(data) {
     } catch (error) {}
 }
 
+function diff_hours(dt2, dt1) {
+    var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+    diff /= (60 * 60);
+    return Math.abs(Math.round(diff));
+}
+
 function callback(data) {
     visitor = data;
-    addData(data);
+    db.collection("visitors")
+        .where("latitude", "==", visitor.latitude)
+        .where("longitude", "==", visitor.longitude)
+        .orderBy("created_at", 'desc')
+        .limit(1)
+        .get()
+        .then(function (querySnapshot) {
+            if (querySnapshot.docs.length === 0) {
+                return addData(data);
+            }
+            let lastVisited;
+            querySnapshot.forEach(function (doc) {
+                lastVisited = doc.data().created_at.toDate();
+            });
+            hoursBefore = diff_hours(new Date(), lastVisited);
+            if (hoursBefore > 0) {
+                return addData(data);
+            }
+        })
+        .catch(function (error) {});
 }
 
 const script = document.createElement('script');
