@@ -1,2 +1,2 @@
-# CodeCanyon.Buttons
-Buttons Repo for CodeCanyon
+# Awesome Butttons
+A simple easy to use button library for web.
