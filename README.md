@@ -3,7 +3,8 @@ A simple easy to use-ready to go button library for web development.
 
 ![demo banner](https://github.com/abdunnahid/Awesome-Buttons/blob/master/public/assets/demo.png?raw=true)
 
-##### [Awesome Buttons Preview](https://button-awesome.web.app/)
+#### [Awesome Buttons Live](https://button-awesome.web.app/)
+
 ## How To
 * Download the js and the css files. 
 * Add it to your index.html.
